@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: userservice
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        file-extension: yaml
+  rabbitmq:
+    host: 192.168.88.100 # 主机名
+    port: 5672 # 端口
+    virtual-host: / # 虚拟主机
+    username: itcast # 用户名
+    password: 123321 # 密码
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-active: 8
+  datasource:
+    url: jdbc:mysql://localhost:3306/ssm_work?useSSL=false&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8082
+
+
+
+
